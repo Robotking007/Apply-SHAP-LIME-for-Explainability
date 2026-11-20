@@ -1,0 +1,105 @@
+{
+  "samples": {
+    "total": 178,
+    "train": 133,
+    "test": 45
+  },
+  "features": 13,
+  "class_names": [
+    "Cultivar 0",
+    "Cultivar 1",
+    "Cultivar 2"
+  ],
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "confusion_matrix": [
+    [
+      15,
+      0,
+      0
+    ],
+    [
+      0,
+      18,
+      0
+    ],
+    [
+      0,
+      0,
+      12
+    ]
+  ],
+  "test_row": 0,
+  "original_dataset_row": 35,
+  "actual_class": "Cultivar 0",
+  "explained_class": "Cultivar 0",
+  "model_probability": 0.9212367635708264,
+  "shap_base": 0.3273182957393486,
+  "shap_sum": 0.593918467831478,
+  "shap_reconstructed": 0.9212367635708265,
+  "shap_max_additivity_error": 4.440892098500626e-16,
+  "shap_global": {
+    "proline": 0.11547736380111662,
+    "alcohol": 0.08410227698633735,
+    "flavanoids": 0.08082614309493272,
+    "color intensity": 0.06648334452896981,
+    "od280/od315 of diluted wines": 0.047019172632618234,
+    "total phenols": 0.024617506871503995,
+    "hue": 0.02425166406236851,
+    "magnesium": 0.015982107860180374,
+    "alcalinity of ash": 0.015794484528737857,
+    "proanthocyanins": 0.011641901104684799,
+    "malic acid": 0.007299718833649164,
+    "nonflavanoid phenols": 0.006511424009588962,
+    "ash": 0.0026063258125594837
+  },
+  "shap_local": {
+    "flavanoids": 0.12702944645119557,
+    "alcohol": 0.11551805734343407,
+    "proline": 0.10043702124153259,
+    "color intensity": 0.09898596981366335,
+    "od280/od315 of diluted wines": 0.0538156989666019,
+    "hue": 0.03815794830832329,
+    "total phenols": 0.032096625130328044,
+    "alcalinity of ash": -0.02271753735312268,
+    "proanthocyanins": 0.01824062790480549,
+    "magnesium": 0.013986197333864327,
+    "malic acid": 0.010901789679296836,
+    "nonflavanoid phenols": 0.0077138428653457025,
+    "ash": -0.0002472198537905067
+  },
+  "lime_local": [
+    {
+      "feature": "flavanoids",
+      "condition": "flavanoids > 2.78",
+      "weight": 0.1031091983400633
+    },
+    {
+      "feature": "alcohol",
+      "condition": "12.99 < alcohol <= 13.56",
+      "weight": 0.10222108652523425
+    },
+    {
+      "feature": "color intensity",
+      "condition": "4.68 < color intensity <= 6.25",
+      "weight": 0.08616726999352443
+    },
+    {
+      "feature": "od280/od315 of diluted wines",
+      "condition": "od280/od315 of diluted wines > 3.14",
+      "weight": 0.05742571123540225
+    },
+    {
+      "feature": "proline",
+      "condition": "675.00 < proline <= 985.00",
+      "weight": 0.05526924595399808
+    },
+    {
+      "feature": "total phenols",
+      "condition": "2.40 < total phenols <= 2.80",
+      "weight": 0.02746784424162864
+    }
+  ],
+  "lime_surrogate_prediction": 0.5910891427552476,
+  "lime_local_r2": 0.1864147822996347
+}
