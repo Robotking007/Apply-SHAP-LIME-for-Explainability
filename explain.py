@@ -117,9 +117,12 @@ def main():
     print(f"Wine dataset: {len(wine.data)} rows, {len(feature_names)} features, {len(class_names)} classes")
     print(f"Train/test: {len(train)}/{len(test)} | Accuracy: {accuracy:.4f} | Macro F1: {macro_f1:.4f}")
     print(f"Test row {row} (dataset row {test_rows[row]}): actual {result['actual_class']}, predicted {class_names[class_id]}")
+    print(f"Top global SHAP feature: {feature_names[global_order[0]]}")
     print(f"SHAP: {result['shap_base']:.4f} + ({result['shap_sum']:+.4f}) = {shap_totals[row]:.4f}")
     print(f"SHAP max probability reconstruction error: {max_error:.2e}")
     print(f"LIME: surrogate {result['lime_surrogate_prediction']:.4f} | Local R^2: {result['lime_local_r2']:.4f}")
+    print(f"Local leaders: SHAP {feature_names[local_order[0]]} | LIME {lime_weights[0][0]}")
+    print(f"Forest vs. LIME probability gap: {abs(probability - result['lime_surrogate_prediction']):.4f}")
     print("Saved: outputs/results.json and three explanation plots")
 
 
